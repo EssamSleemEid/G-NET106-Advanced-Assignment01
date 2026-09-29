@@ -1,5 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
+using System.Text;
 
 namespace G_NET106_Advanced_Assignment01
 {
@@ -76,6 +77,13 @@ namespace G_NET106_Advanced_Assignment01
         {
             public T value;
         }
+
+        public class thenew<T> where T : new()
+        {
+           public T make(){
+                return new T();
+            }
+        }
         static void Main(string[] args)
         {
             #region Question01
@@ -151,6 +159,15 @@ namespace G_NET106_Advanced_Assignment01
             //theclass<string> name = new theclass<string>();
             //name.value = " ";
             //Console.WriteLine(name.value);
+            #endregion
+
+            #region Question09
+            //Q9: What is the 'new()' constraint? Write an example.
+
+            // constraint require the type to have a parameter less constructor
+
+            thenew<StringBuilder> builder = new thenew<StringBuilder>();
+            StringBuilder mynew = builder.make();
             #endregion
         }
     }
