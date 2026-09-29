@@ -283,6 +283,16 @@ namespace G_NET106_Advanced_Assignment01
 
             // it allow the generic type to use less derived type where more derived type is expected and the in key is used for generic type parameter that are consumed
             #endregion
+
+            #region Question17
+            //Q17: What is the difference between covariance and contravariance?
+
+            /*
+             covariance : produce value , allow more derived types , support conversion from derived to base 
+             
+             contravariance :  consumes value , allow less derived types , support conversion from base to derived 
+            */
+            #endregion
         }
     }
 }
