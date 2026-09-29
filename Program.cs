@@ -293,6 +293,12 @@ namespace G_NET106_Advanced_Assignment01
              contravariance :  consumes value , allow less derived types , support conversion from base to derived 
             */
             #endregion
+
+            #region Question18
+            //Q18: How do static members work in generic types?
+
+            // its belong to each constructed generic type separately each type has its own static field
+            #endregion
         }
     }
 }
