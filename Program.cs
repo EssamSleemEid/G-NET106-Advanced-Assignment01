@@ -1,4 +1,5 @@
 ﻿using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 
 namespace G_NET106_Advanced_Assignment01
 {
@@ -33,6 +34,18 @@ namespace G_NET106_Advanced_Assignment01
             T value03 = value01;
               value01 = value02;
               value02 = value03;
+        }
+
+        public static T findmax<T>(T a,T b) where T : IComparable<T>
+        {
+            if (a.CompareTo(b)> 0)
+            {
+                return a;
+            }
+            else
+            {
+                return b;
+            }
         }
         static void Main(string[] args)
         {
@@ -71,6 +84,12 @@ namespace G_NET106_Advanced_Assignment01
             //int b = 2;
             //Swap(ref a, ref b);
             //Console.WriteLine("a after : "+a);
+            #endregion
+
+            #region Question05
+            //Q5: Write a generic method FindMax<T> that finds maximum value
+
+            //Console.WriteLine(findmax(10,20));
             #endregion
         }
     }
