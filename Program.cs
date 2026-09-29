@@ -271,6 +271,12 @@ namespace G_NET106_Advanced_Assignment01
             //Console.WriteLine("index 2 : "+mylist.get(2));
             //Console.WriteLine("out of range : "+ mylist.get(5));
             #endregion
+
+            #region Question15
+            //Q15: What is covariance? Explain the 'out' keyword.
+
+            //it allow the generic type to use more derived type where a less derived type is expected and the out key is used for generic type parameter that are returned
+            #endregion
         }
     }
 }
