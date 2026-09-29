@@ -121,6 +121,11 @@ namespace G_NET106_Advanced_Assignment01
                 car01.sound();
             }
         }
+
+        //public class hi<T> where T : car, Itypable, new()
+        //{
+               //not used, only for applying the Q12
+        //} 
         static void Main(string[] args)
         {
             #region Question01
@@ -223,6 +228,12 @@ namespace G_NET106_Advanced_Assignment01
 
             //road<car> BMW=new road<car>();
             //BMW.drive(new car());
+            #endregion
+
+            #region Question12
+            //Q12: How do you apply multiple constraints? Write an example. 
+
+            // it can be applied to one generic type parameter using a comma-seprated after where
             #endregion
         }
     }
