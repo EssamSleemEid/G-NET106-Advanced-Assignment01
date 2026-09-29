@@ -71,6 +71,11 @@ namespace G_NET106_Advanced_Assignment01
         {
             public T value;
         }
+
+        public class theclass<T> where T : class
+        {
+            public T value;
+        }
         static void Main(string[] args)
         {
             #region Question01
@@ -136,6 +141,16 @@ namespace G_NET106_Advanced_Assignment01
 
             //thestruct<string> name = new thestruct<string>();        // here it will not work bc its a sting that can be null 
             //name.value = " ";
+            #endregion
+
+            #region Question08
+            //Q8: What is the 'class' constraint? Write an example.
+
+            // constraint specifies that the type should be a reference type
+
+            //theclass<string> name = new theclass<string>();
+            //name.value = " ";
+            //Console.WriteLine(name.value);
             #endregion
         }
     }
