@@ -277,6 +277,12 @@ namespace G_NET106_Advanced_Assignment01
 
             //it allow the generic type to use more derived type where a less derived type is expected and the out key is used for generic type parameter that are returned
             #endregion
+
+            #region Question16
+            //Q16: What is contravariance? Explain the 'in' keyword.
+
+            // it allow the generic type to use less derived type where more derived type is expected and the in key is used for generic type parameter that are consumed
+            #endregion
         }
     }
 }
