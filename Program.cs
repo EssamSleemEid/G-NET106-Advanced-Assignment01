@@ -47,6 +47,25 @@ namespace G_NET106_Advanced_Assignment01
                 return b;
             }
         }
+
+        public interface IRepository<T>
+        {
+            void add(T value);
+            T get();
+        }
+        public class repository<T> : IRepository<T> {
+
+            private T Value;
+
+            public void add(T value)
+            {
+                Value = value;
+            }
+            public T get()
+            {
+                return Value;
+            }
+        }
         static void Main(string[] args)
         {
             #region Question01
@@ -90,6 +109,16 @@ namespace G_NET106_Advanced_Assignment01
             //Q5: Write a generic method FindMax<T> that finds maximum value
 
             //Console.WriteLine(findmax(10,20));
+            #endregion
+
+            #region Question06
+            //Q6: What is a generic interface? Write IRepository<T>. 
+
+            // interface that use type parameter to define methods that work with different data type
+
+            //repository<string> name=new repository<string>();
+            //name.add("essam sleem");
+            //Console.WriteLine("the name is : "+name.get());
             #endregion
         }
     }
