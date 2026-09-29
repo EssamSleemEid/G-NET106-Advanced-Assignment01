@@ -84,6 +84,27 @@ namespace G_NET106_Advanced_Assignment01
                 return new T();
             }
         }
+
+        public interface Itypable
+        {
+            void type();
+        }
+
+        public class theinterface<T> where T : Itypable
+        {
+            public void typeing(T value)
+            {
+                value.type();
+            }
+        }
+
+        public class thetype : Itypable
+        {
+            public void type()
+            {
+                Console.WriteLine("hello essam");
+            }
+        }
         static void Main(string[] args)
         {
             #region Question01
@@ -168,6 +189,15 @@ namespace G_NET106_Advanced_Assignment01
 
             thenew<StringBuilder> builder = new thenew<StringBuilder>();
             StringBuilder mynew = builder.make();
+            #endregion
+
+            #region Question10
+            //Q10:  What is the interface constraint? Write an example.
+
+            // require the type to implement a  specified interface 
+
+            //theinterface<thetype> word = new theinterface<thetype>();
+            //word.typeing(new thetype());
             #endregion
         }
     }
