@@ -14,6 +14,18 @@
             }
         }
 
+        public class pair<Tkey, Tvalue>
+        {
+            public Tkey key { get; set; }
+            public Tvalue value { get; set; }
+
+            public pair(Tkey Key, Tvalue Value)
+            {
+                key = Key;
+                value = Value;
+            }
+        }
+
         static void Main(string[] args)
         {
             #region Question01
@@ -29,6 +41,16 @@
             //Container<int> adding = new Container<int>();
             //adding.add(1);
             //Console.WriteLine("add method : " + adding.getValue());
+            #endregion
+
+            #region Question03
+            //Q3:What are multiple type parameters? Write Pair<TKey, TValue>.
+
+            //its allow the generic class to work with more than one type
+
+            //pair<int, string> pair = new pair<int, string>(21, "essam");
+            //Console.WriteLine("key : "+ pair.key);
+            //Console.WriteLine("value : "+ pair.value);
             #endregion
         }
     }
