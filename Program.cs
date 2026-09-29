@@ -105,6 +105,22 @@ namespace G_NET106_Advanced_Assignment01
                 Console.WriteLine("hello essam");
             }
         }
+
+        public class car
+        {
+            public void sound()
+            {
+                Console.WriteLine("beeb beeb");
+            }
+        }
+
+        public class road<T> where T: car
+        {
+            public void drive(T car01)
+            {
+                car01.sound();
+            }
+        }
         static void Main(string[] args)
         {
             #region Question01
@@ -198,6 +214,15 @@ namespace G_NET106_Advanced_Assignment01
 
             //theinterface<thetype> word = new theinterface<thetype>();
             //word.typeing(new thetype());
+            #endregion
+
+            #region Question11
+            //Q11: What is the base class constraint? Write an example.
+
+            // require the type to be specified base class or class derived from it 
+
+            //road<car> BMW=new road<car>();
+            //BMW.drive(new car());
             #endregion
         }
     }
