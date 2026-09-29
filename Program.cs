@@ -66,6 +66,11 @@ namespace G_NET106_Advanced_Assignment01
                 return Value;
             }
         }
+
+        public class thestruct<T> where T : struct
+        {
+            public T value;
+        }
         static void Main(string[] args)
         {
             #region Question01
@@ -119,6 +124,18 @@ namespace G_NET106_Advanced_Assignment01
             //repository<string> name=new repository<string>();
             //name.add("essam sleem");
             //Console.WriteLine("the name is : "+name.get());
+            #endregion
+
+            #region Question07
+            //Q7: What is the 'struct' constraint? Write an example.
+
+            // constraint specifies that the type should not be null value type
+
+            //thestruct<int> number= new thestruct<int>();             //for example it will work with int bc its non-nullable value type
+            //number.value = 1;
+
+            //thestruct<string> name = new thestruct<string>();        // here it will not work bc its a sting that can be null 
+            //name.value = " ";
             #endregion
         }
     }
