@@ -235,6 +235,12 @@ namespace G_NET106_Advanced_Assignment01
 
             // it can be applied to one generic type parameter using a comma-seprated after where
             #endregion
+
+            #region Question13
+            //Q13: What does the 'default' keyword do in generics?
+
+            // it returns the default value of a type 0 for int and null for string and false for bool
+            #endregion
         }
     }
 }
