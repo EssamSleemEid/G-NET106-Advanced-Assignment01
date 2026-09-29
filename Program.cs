@@ -299,6 +299,12 @@ namespace G_NET106_Advanced_Assignment01
 
             // its belong to each constructed generic type separately each type has its own static field
             #endregion
+
+            #region Question19
+            //Q19: How can you inherit from a generic class?
+
+            // by specifying its type or it can remain generic and pass its type parameter to the base class
+            #endregion
         }
     }
 }
