@@ -1,4 +1,6 @@
-﻿namespace G_NET106_Advanced_Assignment01
+﻿using System.Runtime.InteropServices;
+
+namespace G_NET106_Advanced_Assignment01
 {
     internal class Program
     {
@@ -26,6 +28,12 @@
             }
         }
 
+        public static void Swap<T>(ref T value01,ref T value02)
+        {
+            T value03 = value01;
+              value01 = value02;
+              value02 = value03;
+        }
         static void Main(string[] args)
         {
             #region Question01
@@ -51,6 +59,18 @@
             //pair<int, string> pair = new pair<int, string>(21, "essam");
             //Console.WriteLine("key : "+ pair.key);
             //Console.WriteLine("value : "+ pair.value);
+            #endregion
+
+            #region Question04
+            //Q4: What is a generic method? Write Swap<T> method.
+
+            // its method that define its own parameter type allow it to work with different data type
+
+            //int a = 1;
+            //Console.WriteLine("a before : "+a);
+            //int b = 2;
+            //Swap(ref a, ref b);
+            //Console.WriteLine("a after : "+a);
             #endregion
         }
     }
