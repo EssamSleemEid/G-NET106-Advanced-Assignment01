@@ -144,6 +144,45 @@ namespace G_NET106_Advanced_Assignment01
                 return list[index];
             }
         }
+
+        public class Cache<TKey, TValue>
+        {
+            private Dictionary<TKey, TValue> items = new();
+            private Dictionary<TKey, DateTime> expiration = new();
+
+            public void Add(TKey key, TValue value, int seconds)
+            {
+                items[key] = value;
+                expiration[key] = DateTime.Now.AddSeconds(seconds);
+            }
+
+            public TValue Get(TKey key)
+            {
+                if (Contains(key))
+                {
+                    return items[key];
+                }
+                return default;
+            }
+            public void Remove(TKey key)
+            {
+                items.Remove(key);
+                expiration.Remove(key);
+            }
+            public bool Contains(TKey key)
+            {
+                if (!items.ContainsKey(key))
+                {
+                    return false;
+                }
+                if (DateTime.Now >= expiration[key])
+                {
+                    Remove(key);
+                    return false;
+                }
+                return true;
+            }
+        }
         static void Main(string[] args)
         {
             #region Question01
@@ -304,6 +343,20 @@ namespace G_NET106_Advanced_Assignment01
             //Q19: How can you inherit from a generic class?
 
             // by specifying its type or it can remain generic and pass its type parameter to the base class
+            #endregion
+
+            #region Question20
+            //Q20: Complete Exercise - Create a generic Cache<TKey, TValue>with Add, Get, Remove, Contains, and expiration support. 
+
+            Cache<string, int> cache = new Cache<string, int>();
+
+            //cache.Add("essam", 20, 10);
+
+            //Console.WriteLine(cache.Get("essam"));
+            //Console.WriteLine(cache.Contains("essam"));
+
+            //cache.Remove("essam");
+            //Console.WriteLine(cache.Contains("essam"));
             #endregion
         }
     }
