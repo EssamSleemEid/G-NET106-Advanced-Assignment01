@@ -126,6 +126,24 @@ namespace G_NET106_Advanced_Assignment01
         //{
                //not used, only for applying the Q12
         //} 
+
+        public class safeList<T>
+        {
+            public List<T> list=new List<T>();
+
+            public void add(T item)
+            {
+               list.Add(item);
+            }
+            public T get(int index)
+            {
+                if(index<0 || index >= list.Count)
+                {
+                    return default(T);
+                }
+                return list[index];
+            }
+        }
         static void Main(string[] args)
         {
             #region Question01
@@ -240,6 +258,18 @@ namespace G_NET106_Advanced_Assignment01
             //Q13: What does the 'default' keyword do in generics?
 
             // it returns the default value of a type 0 for int and null for string and false for bool
+            #endregion
+
+            #region Question14
+            //Q14: Write a SafeList<T> that returns default when the index is invalid.
+
+            //safeList<int> mylist= new safeList<int>();
+            //mylist.add(11);
+            //mylist.add(22);
+            //mylist.add(33);
+            //Console.WriteLine("index 0 : "+mylist.get(0));
+            //Console.WriteLine("index 2 : "+mylist.get(2));
+            //Console.WriteLine("out of range : "+ mylist.get(5));
             #endregion
         }
     }
